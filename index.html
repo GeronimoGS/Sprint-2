@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <title>App de gastos</title>
+  </head>
+  <body class="row align-items-center justify-content-center vh-100">
+    <div class="container col-sm-6 ">
+     
+    <div class="card" style="width: 18rem">
+      <div class="card-body bg-primary text-white">
+        <h5 class="card-title text-center">App de gastos</h5>
+        <h6 class="card-subtitle mb-2 text-center">
+          Ingresa cuánto pagó cada persona
+        </h6>
+      </div>
+      <div class="card" style="width: 18rem">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <input type="text" id="name" placeholder="Nombre" required />
+            <input
+              type="number"
+              id="gasto"
+              placeholder="Gastó"
+              min="1"
+              pattern="^[0-9]+" required
+            />
+            <input
+              type="button"
+              class="btn btn- btn-danger mt-2 w-50"
+              onclick="agregar()"
+              value="Enviar"
+            >
+              
+            </input>
+          </ul>
+          <ul class="list-group list-group-flush">
+            <div id="add" ></div>
+          </ul>
+          <div id="total" style="font-size: 12px">Total:$0</div>
+          <div id="cadauno" style="font-size: 12px">A cada uno le toca aportar:</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+  <script src="app.js"></script>
+</html>
